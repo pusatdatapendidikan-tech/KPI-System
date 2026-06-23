@@ -16,10 +16,12 @@ export default function InputLaporan() {
     setRole(r);
   }, []);
 
-  const handleChange = (e) => setFormData({...formData, [e.target.name]: e.target.value});
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => 
+    setFormData({...formData, [e.target.name]: e.target.value});
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
     // Kirim ke API
     await fetch('/api/reports', {
       method: 'POST',
