@@ -21,7 +21,7 @@ export default function InputLaporan() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     // Kirim ke API
     await fetch('/api/reports', {
       method: 'POST',
@@ -51,11 +51,11 @@ export default function InputLaporan() {
         
         <div className="mb-3">
           <label>Capaian Kualitatif</label>
-          <textarea name="capaianKualitatif" className="form-control" rows="2" onChange={handleChange} required></textarea>
+          <textarea name="capaianKualitatif" className="form-control" rows={2} onChange={handleChange} required></textarea>
         </div>
         <div className="mb-3">
           <label>Capaian Kuantitatif</label>
-          <textarea name="capaianKuantitatif" className="form-control" rows="2" onChange={handleChange} required></textarea>
+          <textarea name="capaianKuantitatif" className="form-control" rows={2} onChange={handleChange} required></textarea>
         </div>
 
         {/* Field lainnya bisa disesuaikan */}
