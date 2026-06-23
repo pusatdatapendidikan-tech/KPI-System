@@ -6,8 +6,8 @@ export default function Login() {
   const [role, setRole] = useState('Kepala Organ');
   const router = useRouter();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
     // Simpan role ke localStorage (Simulasi Auth)
     localStorage.setItem('userRole', role);
     router.push('/dashboard');
